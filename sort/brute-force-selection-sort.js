@@ -1,7 +1,7 @@
 const testsets = [
   {
-    initial: [3, 2, 5, 4, 10, 7],
-    expected: [2, 3, 4, 5, 7, 10]
+    initial: [3, 2, 5, 4, 10, 7, 1],
+    expected: [1, 2, 3, 4, 5, 7, 10]
   },
   {
     initial: [0],
@@ -21,7 +21,7 @@ function selectionSort(arr) {
         minInd = j;
       }
     }
-    if (minVal < arr[i]) {
+    if (min < arr[i]) {
       [arr[i], arr[minInd]] = [arr[minInd], arr[i]];
     }
   }
@@ -30,4 +30,4 @@ function selectionSort(arr) {
 
 
 selectionSort(testsets[0].initial);
-selectionSort(testsets[1].initial);
+// selectionSort(testsets[1].initial);
