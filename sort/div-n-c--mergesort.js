@@ -1,19 +1,19 @@
 const testsets = [
   {
     initial: [18, 3, 2, 5, 4, 4, 10, 7, 1, 20],
-    expected: [1, 2, 3, 4, 4, 5, 7, 10, 18, 20]
+    expected: [1, 2, 3, 4, 4, 5, 7, 10, 18, 20],
   },
   {
     initial: [0],
-    expected: [0]
+    expected: [0],
   },
 ];
 
 mergeSort(testsets[0].initial);
 console.log(testsets[0].initial);
+
 mergeSort(testsets[1].initial);
 console.log(testsets[1].initial);
-
 
 function mergeSort(arr) {
   mSort(arr, 0, arr.length - 1);
@@ -29,8 +29,7 @@ function mSort(arr, start, end) {
   const mid = Math.floor((start + end) / 2);
 
   mSort(arr, start, mid);
-  mSort(arr, mid+1, end);
-
+  mSort(arr, mid + 1, end);
 
   // merge two sorted halves
   const tmpArr = [];
